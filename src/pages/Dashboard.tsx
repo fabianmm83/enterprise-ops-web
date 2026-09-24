@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 import {
   FolderKanban,
   CheckSquare,
@@ -177,25 +178,25 @@ export function Dashboard() {
             Acciones rápidas
           </h2>
           <div className="space-y-2">
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="block p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] text-sm text-slate-300 hover:text-sky-400 hover:border-sky-400/30 transition-all"
             >
               Ver proyectos
-            </a>
-            <a
-              href="/tasks"
+            </Link>
+            <Link
+              to="/tasks"
               className="block p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] text-sm text-slate-300 hover:text-sky-400 hover:border-sky-400/30 transition-all"
             >
               Mis tareas
-            </a>
+            </Link>
             {user?.role === 'ADMIN' && (
-              <a
-                href="/users"
+              <Link
+                to="/users"
                 className="block p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] text-sm text-slate-300 hover:text-sky-400 hover:border-sky-400/30 transition-all"
               >
                 Gestionar usuarios
-              </a>
+              </Link>
             )}
           </div>
         </div>
